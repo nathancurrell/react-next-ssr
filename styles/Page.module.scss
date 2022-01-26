@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+}
+
+.contentWrapper {
+  margin-left: 60px;
+  display: flex;
+  flex: 1;
+
+  @media only screen and (max-width: 1000px) {
+    margin-left: 0;
+  }
+}

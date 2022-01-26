@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: space-around;
+}
+
+@keyframes fadeInBlocks {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+
+  100% {
+    opacity: 65%;
+    top: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+
+  100% {
+    opacity: 100%;
+    left: 0;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+
+  100% {
+    opacity: 100%;
+    top: 0;
+  }
+}
+
+.title {
+  animation: fadeInTitle 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+  > div {
+    flex: 1;
+  }
+
+  p {
+    line-height: 35px;
+  }
+
+  a {
+    border-bottom: 2px solid #399fdb;
+    transition-duration: 200ms;
+  }
+
+  a:hover {
+    background-color: #399fdb;
+    color: white;
+  }
+
+  .left > * {
+    animation: fadeInBlocks 300ms ease-out;
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .left > *:hover {
+  }
+
+  @for $i from 1 through 6 {
+    .left > *:nth-child(#{$i}n) {
+      animation-delay: #{40 * $i}ms;
+    }
+  }
+
+  .left ul {
+    display: flex;
+    max-width: 540px;
+    margin-bottom: 40px;
+
+    li {
+      width: 50%;
+      max-width: 270px;
+      font-weight: bold;
+      transition-duration: 200ms;
+    }
+
+    li::before {
+      transition-duration: 1000ms;
+      transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    li:hover {
+      transform: scale(1.5);
+    }
+
+    li:hover::before {
+      transform: rotate(360deg);
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .rightContent {
+    width: fit-content;
+    flex-direction: column;
+    display: flex;
+    animation: fadeInRight 600ms ease-out;
+    position: relative;
+  }
+
+  .timelineTitle {
+    font-family: 'neristhin';
+    color: #399fdb;
+    font-weight: 900;
+    margin: 0;
+    font-size: 24px;
+  }
+}

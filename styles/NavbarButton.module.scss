@@ -1,0 +1,63 @@
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 1000px) {
+    height: 60px;
+    padding: 0 2%;
+  }
+
+  @media only screen and (max-width: 420px) {
+    height: 55px;
+    padding: 0 1%;
+  }
+
+  @media only screen and (max-width: 370px) {
+    height: 50px;
+    padding: 0;
+  }
+
+  img {
+    width: 60px;
+    padding: 12px;
+    opacity: 100%;
+    transition-duration: 150ms;
+    transition-delay: 30ms;
+
+    @media only screen and (max-width: 420px) {
+      width: 55px;
+    }
+
+    @media only screen and (max-width: 420px) {
+      width: 50px;
+    }
+  }
+  span {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition-duration: 150ms;
+    transition-delay: 0ms;
+
+    background-color: #fbeb6e;
+    background-image: linear-gradient(#fbeb6e, #eb5fbd);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;  
+  }
+}
+
+.navIcon:hover {
+  img {
+    opacity: 0;
+    transition-delay: 0ms;
+  }
+  span {
+    opacity: 100%;
+    transition-delay: 30ms;
+  }
+}

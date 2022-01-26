@@ -1,0 +1,117 @@
+html {
+  /* background: #270079; */
+  /* background: -webkit-linear-gradient(top, #270079 0%, #F568AB 200%); */
+  background-color: #1c1b1f;;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1 {
+  font-family: 'neristhin';
+  font-weight: 100;
+  letter-spacing: 10px;
+  font-size: 50px;
+  color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 55px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  /* background: -webkit-linear-gradient(top, #F568AB 45%, #F568AB 85%); */
+  /* background: -webkit-linear-gradient(top, #F568AB 0%, #F7E056 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* background-color: #F568AB; */
+  color: #F568AB;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p, li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 200;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+li {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 30px;
+  flex: 0 50%;
+  font-size: 16px;
+  position: relative;
+}
+
+li::before {
+  height: 30px;
+  position: absolute;
+  /* content: "🐙"; */
+  content: "💾";  
+  /* content: "🌌"; */
+  /* content: "🚀"; */
+  /* content: "🌠"; */
+  /* content: "⭐"; */
+  /* content: "⏵"; */
+  left: 0;
+  color: #399fdb;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 822px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+.fixed-bg {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #270079;
+  background: -webkit-linear-gradient(225deg, #270079 0%, 70%, #F568AB 100%);
+  background: -moz-linear-gradient(225deg, #270079 0%, 70%, #F568AB 100%);
+  background: -ms-linear-gradient(225deg, #270079 0%, 70%, #F568AB 100%);
+  background: -o-linear-gradient(225deg, #270079 0%, 70%, #F568AB 100%);
+  background: linear-gradient(225deg, #270079 0%, 70%, #F568AB 100%);
+  background-attachment: fixed;
+  position: fixed;
+}
